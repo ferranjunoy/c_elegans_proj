@@ -5,18 +5,6 @@ of the C. elegans connectome
 
 import numpy as np
 
-class Neuron:
-    def __init__(self, name: str, neuron_types: list):
-        self.name = name
-        self.neuron_types = neuron_types
-        self.weights = []  # List of weights for connections to other neurons
-        self.bias = np.random.rand()  # Initialize bias with random values
-        self.output = None  # Placeholder for neuron output
-
-    def add_connection(self, neuron, weight):
-        # Add a connection to another neuron with a given weight
-        self.weights.append((neuron, weight))
-
 class NeuralNetwork:
     def __init__(self, neurons):
         self.layer = neurons
